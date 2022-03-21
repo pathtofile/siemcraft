@@ -1,0 +1,19 @@
+title: Security Logon
+id: bf10b06b-7dff-44d8-abd3-e07627253797
+status: experimental
+description: A user's local group membership was enumerated.
+author: pathtofile
+date: 2022/01/15
+references:
+    - https://blog.tofile.dev
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID:
+            - 4798
+    condition: selection
+falsepositives:
+    - unknown
+level: low

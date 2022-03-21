@@ -1,0 +1,6 @@
+bin/*
+*.mcpack
+rulesbad
+
+# Used for debugging scripts
+siemcraft_addon_behavior/node_modules

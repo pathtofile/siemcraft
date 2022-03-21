@@ -1,0 +1,20 @@
+title: Whoami Execution
+id: 36de6a23-651e-485a-ba69-3966d66707af
+status: experimental
+description: Whoami.exe runs
+references:
+    - https://blog.tofile.dev
+tags:
+    - attack.execution
+author: pathtofile
+date: 2022/01/15
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\whoami.exe'
+    condition: selection
+falsepositives:
+    - unknown
+level: high

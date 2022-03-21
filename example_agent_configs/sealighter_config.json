@@ -1,0 +1,17 @@
+{
+    "session_properties": {
+        "session_name": "Sealighter-Kernel-Process-Start",
+        "output_format": "event_log"
+    },
+    "kernel_traces": [
+        {
+            "trace_name": "kernel_proc_start_trace",
+            "provider_name": "process",
+            "filters": {
+                "any_of": {
+                    "opcode_is": 1
+                }
+            }
+        }
+    ]
+}

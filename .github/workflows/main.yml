@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.17.6'
+
+      - name: Build binary
+        run: go build -o .\bin\siemcraft.exe ./src
+
+      - name: Build Behavior addon
+        run: Compress-Archive -Path .\siemcraft_addon_behavior -DestinationPath .\bin\siemcraft_addon_behavior.mcpack -Force
+
+      - name: Build Resource addon
+        run: Compress-Archive -Path .\siemcraft_addon_resource -DestinationPath .\bin\siemcraft_addon_resource.mcpack -Force
+
+      - name: Package addon
+        run: Compress-Archive -Path .\bin\*.mcpack -DestinationPath .\bin\siemcraft.mcaddon -Force

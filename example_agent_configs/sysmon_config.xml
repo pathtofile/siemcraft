@@ -1,0 +1,14 @@
+<Sysmon schemaversion="10.4">
+    <HashAlgorithms>md5,sha256</HashAlgorithms>
+    <CheckRevocation/>
+    <EventFiltering>
+        <ProcessCreate onmatch="exclude" />
+        <ProcessTerminate onmatch="exclude" />
+        <RuleGroup name="" groupRelation="or">
+            <ProcessCreate onmatch="include">
+                <Image condition="contains">whoami.exe</Image>
+                <Image condition="contains">where.exe</Image>
+            </ProcessCreate>
+        </RuleGroup>
+    </EventFiltering>
+</Sysmon>

@@ -1,0 +1,64 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.17.6'
+
+      - name: Build binary
+        run: go build -o .\bin\siemcraft.exe ./src
+
+      - name: Build Behavior addon
+        run: Compress-Archive -Path .\siemcraft_addon_behavior -DestinationPath .\bin\siemcraft_addon_behavior.mcpack -Force
+
+      - name: Build Resource addon
+        run: Compress-Archive -Path .\siemcraft_addon_resource -DestinationPath .\bin\siemcraft_addon_resource.mcpack -Force
+
+      - name: Package addon
+        run: Compress-Archive -Path .\bin\*.mcpack -DestinationPath .\bin\siemcraft.mcaddon -Force
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload binary
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./bin/siemcraft.exe
+          asset_name: siemcraft.exe
+          asset_content_type: application/octet-stream
+
+      - name: Upload addon
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./bin/siemcraft.mcaddon
+          asset_name: siemcraft.mcaddon
+          asset_content_type: application/octet-stream
