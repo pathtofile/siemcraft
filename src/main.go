@@ -17,7 +17,7 @@ func mainReturnWithCode() int {
 	bindPort := flag.String("port", "8000", "Port to bind websocket to")
 	fakeEvents := flag.Bool("fakeEvents", false, "Don't subscript to event logs, just fake generate them")
 	noKill := flag.Bool("noKill", false, "Never attempt to kill a process")
-	flag.Var(&channels, "channels", "Comma-seperated list of event logs to subscript to\n(default [\"Microsoft-Windows-Sysmon/Operational\", \"Security\"])")
+	flag.Var(&channels, "channels", "Comma-seperated list of event logs to subscribe to\n(default [\"Microsoft-Windows-Sysmon/Operational\", \"Security\"])")
 	flag.Parse()
 
 	// Set default channels if none specified
