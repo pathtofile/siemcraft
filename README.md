@@ -7,7 +7,7 @@
 Inspired by [Kubecraftadmin](https://github.com/erjadi/kubecraftadmin), this project allows you to monitor
 and detect intrusions across your entire Windows domain, while still mining mad diamond.
 
-![minecraft player looking at a pig with SIGMA rule information aboe it's head](pics/siemcraft_pig.png)
+![minecraft player looking at a pig with SIGMA rule information aboe it's head](assets/siemcraft_pig.png)
 
 - [How it works](#how-it-works)
   - [Event Log collecter](#event-log-collecter)
@@ -111,7 +111,7 @@ machine as minecraft).
 ## Addons
 To install the Minecraft addon, double-click on the `.mcpack` from the machine with the Minecraft client.
 This should install both packs, which you can confirm by clicking `Settings` in Minecraft:
-![Minecraft settings with Pack installed](pics/siemcraft_settings.png)
+![Minecraft settings with Pack installed](assets/siemcraft_settings.png)
 
 # Running
 ## Controller
@@ -166,8 +166,8 @@ Next, create a new Minecraft world with the following options:
 - All cheats and experiments enabled, and achievements turned off
 - Both the SIEMCRAFT 'Resource' and 'Behaviour' packs activated 
 
-![Siemcraft options, all experiments on](pics/siemcraft_settings2.png)
-![Siemcraft addons enbled](pics/siemcraft_settings3.png)
+![Siemcraft options, all experiments on](assets/siemcraft_settings2.png)
+![Siemcraft addons enbled](assets/siemcraft_settings3.png)
 
 Once the Map is created, open up the console and type this command to connect
 to the SIEMCRAFT controller
@@ -180,9 +180,11 @@ By default the IP Address and port are:
 /connect 127.0.0.1:8000/ws
 ```
 
-![Entering SIEMCRAFt command](pics/siemcraft_command.png)
+![Entering SIEMCRAFt command](assets/siemcraft_command.png)
 
 You should see positive output in both the Minecraft UI and in the Controller's output.
 
 # Why would you make this?
 See [the blog post](https://blog.tofile.dev/), but tl;dr is because I'm an idiot who was bored.
+I also presented this "work" at a local security meetup, you can see the slides [here](/assets/diamond_talk_sharable.pdf)
+(but the blog has more info, and the talk wasn't recorded).
