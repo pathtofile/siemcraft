@@ -25,6 +25,7 @@ and detect intrusions across your entire Windows domain, while still mining mad 
 - [Running](#running)
   - [Controller](#controller-1)
   - [Addons](#addons-1)
+- [Why would you make this?](#why-would-you-make-this)
 
 # How it works
 SIEMCRAFT is a project that combines a standalone executable 'controller', with a Minecraft addon, designed to
@@ -182,3 +183,6 @@ By default the IP Address and port are:
 ![Entering SIEMCRAFt command](pics/siemcraft_command.png)
 
 You should see positive output in both the Minecraft UI and in the Controller's output.
+
+# Why would you make this?
+See [the blog post](https://blog.tofile.dev/), but tl;dr is because I'm an idiot who was bored.
