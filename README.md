@@ -70,7 +70,7 @@ If the entity is killed by a player weilding a `Diamond Sword`, SIEMCRAFT will t
 If the entity is killed by any other means the event is silently dismissed.
 
 # How it works - diagram
-![incredibly overcomplicated diagram of the above overview](/pics/diagram.png)
+![incredibly overcomplicated diagram of the above overview](/assets/diagram.png)
 
 
 # Building
