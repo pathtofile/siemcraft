@@ -1,4 +1,4 @@
-![SIEMCraft logo](/pics/siemcraft_logo.png)
+![SIEMCraft logo](assets/siemcraft_logo.png)
 
 **SIEMCraft - Security Information and Event Management in Minecraft**
 
