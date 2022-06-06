@@ -16,8 +16,8 @@ import (
 	"golang.org/x/sync/errgroup"
 
 	"github.com/bradleyjkemp/sigma-go"
-	"github.com/sandertv/mcwss"
-	"github.com/sandertv/mcwss/protocol/event"
+	"github.com/pathtofile/mcwss"
+	"github.com/pathtofile/mcwss/protocol/event"
 )
 
 var MinecraftPlayers []*mcwss.Player
@@ -140,7 +140,7 @@ func RaiseAlert(event map[string]string, rule *sigma.Rule, channel string) {
 	if rand.Float32() < 0.5 {
 		zPos = zPos * -1
 	}
-	fmt.Printf("[m] Spawning %s at %d:%d from player %s:\n", entity, xPos, zPos, player.Name())
+	fmt.Printf("[m] Spawning %s at %d:%d from player %s\n", entity, xPos, zPos, player.Name())
 	spawnCmd := fmt.Sprintf("summon %s \"%s\" ~%d ~ ~%d", entity, name, xPos, zPos)
 	player.Exec(spawnCmd, nil)
 
@@ -164,7 +164,7 @@ func actionbar(player *mcwss.Player, message string) {
 }
 
 func onMessage(event *event.PlayerMessage) {
-	if event.Sender != "Script Engine" || event.MessageType != "tell" {
+	if event.Sender != "Script Engine" || event.Type != "tell" {
 		return
 	}
 	// First trim quotes, then check and trim prefix
