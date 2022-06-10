@@ -112,7 +112,7 @@ machine as minecraft).
 
 ## Addons
 To install the Minecraft addon, double-click on the `.mcpack` from the machine with the Minecraft client.
-This should install both packs, which you can confirm by clicking `Settings` in Minecraft:
+This should install all packs, which you can confirm by clicking `Settings` in Minecraft:
 ![Minecraft settings with Pack installed](assets/siemcraft_settings.png)
 
 # Running
@@ -165,8 +165,8 @@ checknetisolation loopbackexempt -s
 ```
 
 Next, create a new Minecraft world with the following options:
-- All cheats and experiments enabled, and achievements turned off
-- Both the SIEMCRAFT 'Resource' and 'Behaviour' packs activated 
+- All cheats and experiments enabled (including GameTest), and achievements turned off
+- All the SIEMCRAFT 'Resource' and 'Behaviour' packs activated 
 
 ![Siemcraft options, all experiments on](assets/siemcraft_settings2.png)
 ![Siemcraft addons enbled](assets/siemcraft_settings3.png)
