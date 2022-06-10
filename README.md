@@ -85,17 +85,19 @@ go build -o siemcraft.exe ./src
 ```
 
 ## Minecraft Addons
-There are two Minecraft addons, a 'behaviour' pack and an 'entity' pack. Packs are just ZIPs, and can be combined
+There are three Minecraft addons, a 'behaviour' pack and an 'entity' pack. Packs are just ZIPs, and can be combined
 into a single `.mcaddon` ZIP for extra portability:
 ```powershell
 # Windows
 Compress-Archive -Path "siemcraft_addon_behavior" -DestinationPath "siemcraft_addon_behavior.mcpack" -Force
 Compress-Archive -Path "siemcraft_addon_resource" -DestinationPath "siemcraft_addon_resource.mcpack" -Force
+Compress-Archive -Path "siemcraft_addon_gametest" -DestinationPath "siemcraft_addon_gametest.mcpack" -Force
 Compress-Archive -Path "*.mcpack -DestinationPath" "siemcraft.mcaddon" -Force
 
 # Linux
 zip -r siemcraft_addon_behavior.mcpack siemcraft_addon_behavior
 zip -r siemcraft_addon_resource.mcpack siemcraft_addon_resource
+zip -r siemcraft_addon_gametest.mcpack siemcraft_addon_gametest
 zip -r siemcraft_addon_resource.mcaddon *.mcpack
 ```
 
