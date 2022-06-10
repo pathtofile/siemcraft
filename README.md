@@ -2,12 +2,14 @@
 
 **SIEMCraft - Security Information and Event Management in Minecraft**
 
-(please do not take this serioussly, for more information read [this blog post](https://blog.tofile.dev/))
+(please do not take this serioussly, for more information read [this blog post](https://blog.tofile.dev/2022/06/10/siemcraft.html))
 
 Inspired by [Kubecraftadmin](https://github.com/erjadi/kubecraftadmin), this project allows you to monitor
 and detect intrusions across your entire Windows domain, while still mining mad diamond.
 
 ![minecraft player looking at a pig with SIGMA rule information aboe it's head](assets/siemcraft_pig.png)
+
+Also see [this demo video](https://youtu.be/8Vyf8Y5wcRY) of SIEMCRAFT in VR.
 
 - [How it works](#how-it-works)
   - [Event Log collecter](#event-log-collecter)
@@ -185,6 +187,6 @@ By default the IP Address and port are:
 You should see positive output in both the Minecraft UI and in the Controller's output.
 
 # Why would you make this?
-See [the blog post](https://blog.tofile.dev/), but tl;dr is because I'm an idiot who was bored.
+See [the blog post](https://blog.tofile.dev/2022/06/10/siemcraft.html), but tl;dr is because I'm an idiot who was bored.
 I also presented this "work" at a local security meetup, you can see the slides [here](/assets/diamond_talk_sharable.pdf)
 (but the blog has more info, and the talk wasn't recorded).
