@@ -1,18 +1,20 @@
 {
   "format_version": 2,
   "header": {
-    "description": "SIEMCraft Behavior",
-    "name": "SIEMCraft Behavior",
-    "uuid": "3325c3d1-7424-45d1-af5c-bcfefff938b3",
+    "description": "SIEMCraft GameTest",
+    "name": "SIEMCraft GameTest",
+    "uuid": "408a9640-e490-4e9b-9b6e-88f63e5eb27a",
     "version": [1, 0, 0],
     "min_engine_version": [ 1, 18, 0 ]
   },
   "modules": [
     {
-      "description": "SIEMCraft Behavior",
-      "type": "data",
-      "uuid": "c2db45b6-b6cc-4809-a079-313c3e1a9471",
-      "version": [1, 0, 0]
+      "description": "SIEMCraft GameTest Script",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "ead57a90-41fc-4f3b-8e1a-ccc64c99da0c",
+      "version": [1, 0, 0],
+      "entry": "scripts/script_gametest.js"
     }
   ],
   "dependencies": [

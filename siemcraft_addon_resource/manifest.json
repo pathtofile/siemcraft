@@ -2,7 +2,7 @@
     "format_version": 2,
     "header": {
         "description": "SIEMCraft Resource",
-        "name": "SIEMCraft",
+        "name": "SIEMCraft Resource",
         "uuid": "9b761fbc-67d0-4432-a2da-59e52dbafc2e",
         "version": [1, 0, 0],
         "min_engine_version": [ 1, 18, 0 ]
